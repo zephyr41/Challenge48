@@ -1,93 +1,1546 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>reefgaming</title>
-</head>
-<body>
-    <div>
-        <link href="./desktop1.css" rel="stylesheet" />
-        <div>
-          <div class="desktop1-desktop1">
-            <img
-              alt="Rectangle163"
-              src="/playground_assets/rectangle163-j3rj-1500w.png"
-              class="desktop1-rectangle1"
-            />
-            <img
-              alt="Layer164"
-              src="/playground_assets/layer164-e7ao.svg"
-              class="desktop1-layer1"
-            />
-            <div class="desktop1-group1">
-              <span class="desktop1-text"><span>Freebox</span></span>
-              <img
-                alt="Calque1611"
-                src="/playground_assets/calque1611-5at1g.svg"
-                class="desktop1-calque1"
-              />
+<html><head><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style><style id="st_globalStyles">
+/* SCROLLBAR */
+
+[dark-scroll]::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[dark-scroll]::-webkit-scrollbar-track-piece {
+  background-color: #2b2b2b;
+  border: 1px solid #1d1d1d;
+}
+
+[dark-scroll]::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #4d4d4d;
+}
+[dark-scroll]::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5a5a;
+}
+
+/* LOAD PROGRESS */
+
+.turbolinks-progress-bar {
+  height: 3px;
+  background-color: #ff6250;
+}
+
+/* GROUPING */
+
+[data-id].ui-selecting {
+  box-shadow: inset 0 0 0 1px #4285f4 !important;
+}
+[data-id].ui-selected {
+  box-shadow: inset 0 0 0 1px #4285f4 !important;
+}
+
+/* CURSOR */
+
+body[mode='comments'] * {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00LjkxNjQ4IDIzLjQxMDlDNS40OTE1MyAyMi45ODg3IDUuOTMxNzkgMjIuMzkzNSA2LjIzMjggMjEuNjQwN0M0Ljc5MDY5IDE5LjczODMgNCAxNy4zOTMzIDQgMTQuOTk3NUM0IDguOTM0MSA4LjkzMjgyIDQgMTUuMDAyMiA0QzIxLjA3MTcgNCAyNiA4LjkzOTE5IDI2IDE1LjAwMjVDMjYgMjEuMDY1OSAyMS4wNjcyIDI2IDE0Ljk5NzggMjZDMTIuOTg5NiAyNiAxMS4wMzUzIDI1LjQ1NTcgOS4zMjM2NyAyNC40MjMxQzguNDI5NjUgMjQuOTU3MiA3LjQxNDM0IDI1LjIyNjggNi4zMDAxOCAyNS4yMjY4QzUuOTU0MjYgMjUuMjI2OCA1LjU5OTM1IDI1LjIwMTQgNS4yNTM0MiAyNS4xNDU0QzQuOTAzIDI1LjA4OTUgNC42Mjg5NiAyNC44MDQ2IDQuNTUyNTggMjQuNDE4QzQuNDc2MjEgMjQuMDI2NCA0LjYxOTk3IDIzLjYyOTYgNC45MTY0OCAyMy40MTA5WiIgZmlsbD0iI0ZGNjI1MCIvPgo8L3N2Zz4K')
+      0 24,
+    auto !important;
+}
+
+body[mode='code'] [data-id]:not(.hidden) {
+  cursor: default;
+}
+
+/* default node state */
+
+body[mode='code'] [data-id]:not(.hidden), body[mode='comments'] [data-id]:not(.hidden) {
+  pointer-events: all;
+}
+
+/* is_image */
+
+body[mode='code'] [data-id].is_image [data-id], body[mode='comments'] [data-id].is_image [data-id] {
+  pointer-events: none !important;
+}
+
+/* without a data-id or ignored */
+
+[data-id].ignore,body[mode='code'] *:not([data-id]) {
+  pointer-events: none !important;
+}
+/* disable transforms for ignored elements */
+
+
+body[mode='code'] [data-id]:hover{
+  transform: none !important;
+}
+
+</style><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-hotspots-script" src="hotspots.js"></script><style id="hotspots-styles">
+    .hotspot {
+      position: absolute;
+      border: 1px solid #2a9fd8;
+      background: rgba(0, 173, 255, 0.54);
+      opacity: 0;
+      z-index: -1;
+      pointer-events:none;
+    }
+  </style><style id="hide-styles">
+    .hotspot {
+      display:none !important;
+    }
+  </style><script id="s_turbo" src="https://animaapp.s3.amazonaws.com/static/turbo.es2017-umd.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500");
+
+
+@font-face {
+  font-family: "ProFontWindows-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/601c3af15b0d984a6f7d220e/fonts/profontwindows-axbmx.ttf') format("truetype");
+}
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/641d8e70543e3dd0f0848811.641d8e717c37aefb5e64c6f1.ORMZoAc.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --guardsman-red: #cc0000;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 18px;
+  --font-size-xl: 36px;
+  --font-size-xxl: 48px;
+  --font-size-xxxl: 50px;
+  --font-size-xxxxl: 180px;
+ 
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-profontwindows-regular: "ProFontWindows-Regular", Helvetica;
+}
+.montserrat-medium-white-36px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.profontwindows-regular-normal-white-48px {
+  color: var(--white);
+  font-family: var(--font-family-profontwindows-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - desktop-1 */
+
+.desktop-1 {
+  background-color: var(--white);
+  border: 1px none;
+  height: 4246px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.desktop-1 .rectangle-1-Ys8k0x {
+  background-color: var(--black);
+  height: 4246px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.desktop-1 .layer_1-Ys8k0x {
+  background-color: transparent;
+  height: 33px;
+  left: 28px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 21px;
+  width: 90px;
+}
+
+.desktop-1 .group-1-Ys8k0x {
+  background-color: transparent;
+  height: 20px;
+  left: 140px;
+  position: absolute;
+  top: 27px;
+  width: 86px;
+}
+
+.desktop-1 .freebox-xdqVJv {
+  background-color: transparent;
+  height: 20px;
+  left: -2px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4px;
+  width: 72px;
+}
+
+.desktop-1 .calque_1-xdqVJv {
+  height: 6px;
+  left: 73px;
+  top: 9px;
+  width: 11px;
+}
+
+.desktop-1 .group-2-Ys8k0x {
+  background-color: transparent;
+  height: 20px;
+  left: 246px;
+  position: absolute;
+  top: 27px;
+  width: 75px;
+}
+
+.desktop-1 .mobile-LE77Zx {
+  background-color: transparent;
+  height: 20px;
+  left: -2px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4px;
+  width: 61px;
+}
+
+.desktop-1 .calque_1-LE77Zx {
+  height: 6px;
+  left: 62px;
+  top: 9px;
+  width: 11px;
+}
+
+.desktop-1 .boutiques-Ys8k0x {
+  background-color: transparent;
+  height: 23px;
+  left: 339px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 31px;
+  width: 90px;
+}
+
+.desktop-1 .free-pro-Ys8k0x {
+  background-color: transparent;
+  height: 19px;
+  left: 445px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 32px;
+  width: 74px;
+}
+
+.desktop-1 .assistance-Ys8k0x {
+  background-color: transparent;
+  height: 20px;
+  left: 534px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 31px;
+  width: 93px;
+}
+
+.desktop-1 .group-5-Ys8k0x {
+  background-color: transparent;
+  height: 36px;
+  left: 1069px;
+  position: absolute;
+  top: 15px;
+  width: 151px;
+}
+
+.desktop-1 .carte-dligibilit-W6BBbS {
+  background-color: transparent;
+  height: 19px;
+  left: 43px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 14px;
+  width: 110px;
+}
+
+.desktop-1 .vector-1-W6BBbS {
+  background-color: transparent;
+  height: 46px;
+  left: -4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -1px;
+  width: 43px;
+}
+
+.desktop-1 .line-1-Ys8k0x {
+  background-color: transparent;
+  height: 36px;
+  left: 1236px;
+  object-fit: cover;
+  position: absolute;
+  top: 15px;
+  width: 1px;
+}
+
+.desktop-1 .group-6-Ys8k0x {
+  background-color: transparent;
+  height: 36px;
+  left: 1254px;
+  position: absolute;
+  top: 15px;
+  width: 133px;
+}
+
+.desktop-1 .espace-abonn-DSKghL {
+  background-color: transparent;
+  height: 19px;
+  left: 34px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 14px;
+  width: 99px;
+}
+
+.desktop-1 .group-4-DSKghL {
+  background-color: transparent;
+  height: 36px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.desktop-1 .vector-2-1M3MNL {
+  background-color: transparent;
+  height: 21px;
+  left: -1px;
+  position: absolute;
+  top: 17px;
+  width: 26px;
+}
+
+.desktop-1 .ellipse-1-1M3MNL {
+  background-color: #00000040;
+  border: 2px solid;
+  border-color: var(--white);
+  border-radius: 7.77px;
+  height: 16px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.desktop-1 .plan-de-travail-2-1-Ys8k0x {
+  background-color: transparent;
+  height: 475px;
+  left: 206px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1010px;
+}
+
+.desktop-1 .loffre-qui-casse-le-game-Ys8k0x {
+  background-color: transparent;
+  height: auto;
+  left: 496px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 264px;
+  width: auto;
+}
+
+.desktop-1 .group-7-Ys8k0x {
+  background-color: transparent;
+  height: 180px;
+  left: 648px;
+  position: absolute;
+  top: 819px;
+  width: 331px;
+}
+
+.desktop-1 .x99-fgrXsR {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-profontwindows-regular);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.desktop-1 .span0-sAlMkl {
+  color: var(--guardsman-red);
+  font-style: normal;
+  letter-spacing: 0.00px;
+}
+
+.desktop-1 .span1-sAlMkl {
+  letter-spacing: -52.20px;
+}
+
+.desktop-1 .title-fgrXsR {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 184px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 87px;
+  width: 143px;
+}
+
+.desktop-1 .group-8-Ys8k0x {
+  background-color: transparent;
+  height: 89px;
+  left: 1002px;
+  position: absolute;
+  top: 864px;
+  width: 338px;
+}
+
+.desktop-1 .rectangle-2-Xl5Dwo {
+  height: 89px;
+  width: 336px;
+}
+
+.desktop-1 .sabonner-Xl5Dwo {
+  background-color: transparent;
+  height: auto;
+  left: 75px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  width: auto;
+}
+
+.desktop-1 .group-9-Ys8k0x {
+  background-color: transparent;
+  height: 417px;
+  left: -14px;
+  position: absolute;
+  top: 340px;
+  width: 659px;
+}
+
+.desktop-1 .ecran-1-kphd6v {
+  background-color: transparent;
+  height: 417px;
+  left: 14px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 638px;
+}
+
+.desktop-1 .casque-1-kphd6v {
+  background-color: transparent;
+  height: 229px;
+  left: 406px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 85px;
+  width: 253px;
+}
+
+.desktop-1 .pc-1-kphd6v {
+  background-color: transparent;
+  height: 169px;
+  left: 51px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 153px;
+  width: 208px;
+}
+
+.desktop-1 .test-mouse-1-kphd6v {
+  background-color: transparent;
+  height: 93px;
+  left: 179px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 38px;
+  width: 135px;
+}
+
+.desktop-1 .plus-2-Ys8k0x {
+  background-color: transparent;
+  height: 184px;
+  left: 582px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 447px;
+  width: 328px;
+}
+
+.desktop-1 .x1-setup-gaming-complet-Ys8k0x {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 77px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 734px;
+  width: auto;
+}
+
+.desktop-1 .span0-U1u7RM {
+  font-style: normal;
+}
+
+.desktop-1 .rectangle-3-Ys8k0x {
+  background-color: var(--white);
+  height: 810px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1039px;
+  width: 1440px;
+}
+
+.desktop-1 .polygon-1-Ys8k0x {
+  background-color: transparent;
+  height: 167px;
+  left: 664px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1361px;
+  width: 149px;
+}
+
+.desktop-1 .le-setup-qui-casse-le-game-Ys8k0x {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-profontwindows-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 105px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1920px;
+  width: auto;
+}
+
+.desktop-1 .span0-YrSAxh {
+  font-style: normal;
+}
+
+.desktop-1 .span2-YrSAxh {
+  font-style: normal;
+}
+
+.desktop-1 .en-cas-de-bug-con-Ys8k0x {
+  background-color: transparent;
+  height: auto;
+  left: 82px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 3122px;
+  width: 1275px;
+}
+
+.desktop-1 .calque_1-Ys8k0x {
+  height: 83px;
+  left: 59px;
+  top: 2184px;
+  width: 46px;
+}
+
+.desktop-1 .calque_1-V3rtYt {
+  height: 83px;
+  left: 1343px;
+  top: 2184px;
+  width: 46px;
+}
+
+.desktop-1 .group-11-Ys8k0x {
+  background-color: transparent;
+  height: 377px;
+  left: 60px;
+  position: absolute;
+  top: 2064px;
+  width: 472px;
+}
+
+.desktop-1 .pc-2-79Yex6 {
+  background-color: transparent;
+  height: 266px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 472px;
+}
+
+.desktop-1 .group-10-79Yex6 {
+  background-color: transparent;
+  height: 89px;
+  left: 82px;
+  position: absolute;
+  top: 288px;
+  width: 338px;
+}
+
+.desktop-1 .rectangle-2-vyXPzx {
+  height: 89px;
+  width: 336px;
+}
+
+.desktop-1 .la-config-vyXPzx {
+  background-color: transparent;
+  height: auto;
+  left: 82px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  width: auto;
+}
+
+.desktop-1 .group-12-Ys8k0x {
+  background-color: transparent;
+  height: 89px;
+  left: 569px;
+  position: absolute;
+  top: 2352px;
+  width: 336px;
+}
+
+.desktop-1 .group-10-678TM3 {
+  background-color: transparent;
+  height: 89px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 338px;
+}
+
+.desktop-1 .rectangle-2-1Voha4 {
+  height: 89px;
+  width: 336px;
+}
+
+.desktop-1 .lcran-1Voha4 {
+  background-color: transparent;
+  height: auto;
+  left: 102px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  width: auto;
+}
+
+.desktop-1 .group-14-Ys8k0x {
+  background-color: transparent;
+  height: 57px;
+  left: 1115px;
+  position: absolute;
+  top: 2925px;
+  width: 214px;
+}
+
+.desktop-1 .group-10-55mDMt {
+  background-color: transparent;
+  height: 57px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 216px;
+}
+
+.desktop-1 .rectangle-2-1mJ9Qx {
+  height: 57px;
+  width: 214px;
+}
+
+.desktop-1 .en-savoir-plus-1mJ9Qx {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 27px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 17px;
+  width: 159px;
+}
+
+.desktop-1 .group-13-Ys8k0x {
+  background-color: transparent;
+  height: 89px;
+  left: 997px;
+  position: absolute;
+  top: 2352px;
+  width: 336px;
+}
+
+.desktop-1 .group-10-xqlGhp {
+  background-color: transparent;
+  height: 89px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 338px;
+}
+
+.desktop-1 .rectangle-2-zGnD5u {
+  height: 89px;
+  width: 336px;
+}
+
+.desktop-1 .le-fauteuil-zGnD5u {
+  background-color: transparent;
+  height: auto;
+  left: 71px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  width: auto;
+}
+
+.desktop-1 .ecran-2-Ys8k0x {
+  background-color: transparent;
+  height: 403px;
+  left: 365px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 1995px;
+  width: 716px;
+}
+
+.desktop-1 .chaise-1-Ys8k0x {
+  background-color: transparent;
+  height: 406px;
+  left: 761px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 1981px;
+  width: 679px;
+}
+
+.desktop-1 .une-freebox-pop-avec-la-fibre-Ys8k0x {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 821px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 734px;
+  width: auto;
+}
+
+.desktop-1 .span0-bfixez {
+  font-style: normal;
+}
+
+.desktop-1 .ellipse-3-Ys8k0x {
+  background-color: #f2c60f;
+  border-radius: 76.5px;
+  height: 153px;
+  left: 905px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 537px;
+  width: 153px;
+}
+
+.desktop-1 .ellipse-4-Ys8k0x {
+  background-color: #141193;
+  border-radius: 34.5px;
+  height: 69px;
+  left: 1219px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 424px;
+  width: 69px;
+}
+
+.desktop-1 .ellipse-5-Ys8k0x {
+  background-color: var(--guardsman-red);
+  border-radius: 34.5px;
+  height: 69px;
+  left: 1227px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 631px;
+  width: 69px;
+}
+
+.desktop-1 .server-pop-1-Ys8k0x {
+  background-color: transparent;
+  height: 166px;
+  left: 978px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 496px;
+  width: 299px;
+}
+
+.desktop-1 .ellipse-2-Ys8k0x {
+  background-color: var(--white);
+  border-radius: 48px;
+  height: 96px;
+  left: 905px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 397px;
+  width: 96px;
+}
+
+.desktop-1 .server-pop-2-Ys8k0x {
+  background-color: transparent;
+  height: 352px;
+  left: 117px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 2638px;
+  width: 634px;
+}
+
+.desktop-1 .calque_1-InqUpZ {
+  height: 102px;
+  left: 800px;
+  top: 2647px;
+  width: 287px;
+}
+
+.desktop-1 .dcouvrez-la-freebox-Ys8k0x {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 800px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 2773px;
+  width: 529px;
+}
+
+.desktop-1 .calque_1 {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.desktop-1 .rectangle-2 {
+  background-color: var(--guardsman-red);
+  border-radius: 67px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+}
+
+.desktop-1 .span1 {
+  color: var(--guardsman-red);
+  font-style: normal;
+}
+</style><script id="anime-js-script" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js" integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8=" crossorigin="anonymous"></script><script id="imgloaded-js-script" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script><style id="action-links-styles">
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+#anima-interface{
+  transition: all 0.5s ease-in-out;
+}
+
+#anima-watermark {
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+#anima-watermark-link{
+  position: fixed;
+  bottom:20px;
+  height:30px;
+  border-radius: 1000px;
+  background: #3B3B3B;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  transition: width 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  text-decoration:none;
+  color:#fff;
+  padding:8px 16px 8px 11px;
+  font-family:Mulish, sans-serif;
+  font-size:12px;
+}
+#anima-watermark-link .text {
+  margin-left: 6px;
+}
+
+.omniview-anima-action-links .link{
+  height: 30px;
+  width: 30px;
+  border-radius: 1000px;
+  background: #3B3B3B;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  transition: width 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  text-decoration:none;
+  color:#fff;
+}
+.omniview-anima-action-links #comment-link .text,.omniview-anima-action-links #code-link .text{
+  display:none;
+  font-size:12px;
+  margin-right:5px;
+}
+.omniview-anima-action-links #comment-link:hover,.omniview-anima-action-links #code-link:hover{
+  width:105px;
+}
+.omniview-anima-action-links #comment-link.pop-active,.omniview-anima-action-links #code-link.pop-active{
+  width:105px;
+  background: #FF6250;
+}
+.omniview-anima-action-links #comment-link.pop-active .text,.omniview-anima-action-links #code-link.pop-active .text{
+  display:block
+}
+.omniview-anima-action-links #comment-link:hover .text,.omniview-anima-action-links #code-link:hover .text{
+  display:block;
+}
+
+.link.navigation{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  width:auto;
+  height:32px;
+  color:#fff;
+  font-size:12px;
+  cursor:default;
+  padding:0 5px;
+}
+.link.navigation .icon{
+  margin:0 6px;
+  fill:none;
+  stroke:currentColor;
+  cursor:pointer;
+}
+.link.navigation .icon.disabled{
+  opacity:0.5;
+  cursor:default;
+}
+
+
+.link.navigation .home-icon{
+  margin-left:6px;
+  fill:currentColor;
+  stroke:currentColor;
+  cursor:pointer;
+}
+
+.omniview-anima-action-links .restart{
+  height: 30px;
+  padding:0 12px;
+  background: #3B3B3B;
+  border-radius: 1000px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:#f1f1f1;
+  font-size: 12px;
+}
+
+.omniview-anima-action-links{
+  display:flex;
+  align-items:center;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  font-family:Mulish, sans-serif;
+  transition: all 0.5s ease-in-out;
+  opacity:1;
+}
+
+.omniview-anima-action-links > * + *{
+   margin-right: 0;
+   margin-left: 10px;
+}
+
+.idle{
+  opacity:0;
+  pointer-events:none;
+}
+
+#popoverOpener {
+  position: absolute;
+  left: 50%;
+  margin-left: -10vw;
+  text-align: center;
+  top: 45vh;
+  width: 20vw;
+}
+
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  font-family: "sans-serif";
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.popover.top {
+  margin-top: -12px
+}
+
+.popover.right {
+  margin-left: 10px
+}
+
+.popover.bottom {
+  margin-top: 10px
+}
+
+.popover.left {
+  margin-left: -10px
+}
+
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0
+}
+
+.popover-content {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  overflow:hidden;
+  font-family:Mulish, sans-serif;
+}
+
+
+
+.popover>.arrow,.popover>.arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid
+}
+
+.popover>.arrow {
+  border-width: 11px
+}
+
+.popover>.arrow:after {
+  content: "";
+  border-width: 10px
+}
+
+.popover.top>.arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #999;
+  border-top-color: rgba(0,0,0,.25);
+  border-bottom-width: 0
+}
+
+.popover.top>.arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-color: #fff;
+  border-bottom-width: 0
+}
+
+.popover.right>.arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #999;
+  border-right-color: rgba(0,0,0,.25);
+  border-left-width: 0
+}
+
+.popover.right>.arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #fff;
+  border-left-width: 0
+}
+
+.popover.bottom>.arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0,0,0,.25)
+}
+
+.popover.bottom>.arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff
+}
+
+.popover.left>.arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0,0,0,.25)
+}
+
+.popover.left>.arrow:after {
+  right: 1px;
+  bottom: -10px;
+  content: " ";
+  border-right-width: 0;
+  border-left-color: #fff
+}
+
+
+
+#anima-comment-popover,#anima-code-popover{
+  background:#333333;
+  color:#fff;
+}
+
+#anima-comment-popover.top>.arrow,#anima-comment-popover.top>.arrow:after,#anima-code-popover.top>.arrow:after,#anima-code-popover.top>.arrow {
+  border-top-color:#333;  
+}
+
+#anima-comment-popover .btn,#anima-code-popover .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 20px;
+  background: #FF6250;
+  color:#fff;
+  border-radius: 100px;
+  width: max-content;
+  text-decoration:none;
+}
+
+@media screen and (max-width: 550px) {
+  #anima-watermark-link {
+    padding: 6px !important;
+  }
+  #anima-watermark-link .text {
+    display: none !important;
+  }
+}
+
+</style><style id="overrides-styles">
+.box-highlight {
+  position: absolute;
+  box-shadow:inset 0 0 0 1px #4285f4;
+  background: rgba(66, 133, 244, 0.1);
+  pointer-events: none;
+  box-sizing: border-box;
+  width:0;
+  height:0;
+  top:0;
+  left:0;
+  transform:translate3d(0,0,0);
+}
+
+.box-wrapper {
+  width:100%;
+  height:100%;
+  position:relative
+}
+.tag-box {
+  position: absolute;
+  left: var(--tag-box-left);
+  top: var(--tag-box-top);
+  width: var(--tag-box-width);
+  height: 20px;
+  max-width: var(--width);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.tag-name {
+  padding: 0 8px;
+  height: 100%;
+  background: #4285f4;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-family: sans-serif;
+  flex-shrink: 0;
+}
+.tag-component-name {
+  padding: 0 8px;
+  height: 100%;
+  background: rgba(51, 102, 255, 0.2);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #4285f4;
+  visibility: hidden;
+  font-family: sans-serif;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tag-component-name span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:inline-block;
+  height: 100%;
+  position: relative;
+  top: 3px;
+}
+
+.box-highlight.hover {
+  z-index:10;
+}
+.box-highlight.fixed {
+  z-index:9;
+}
+
+
+.box-highlight.is_component {
+  position: absolute;
+  box-shadow: inset 0 0 0 1px #ff6250;
+  background: rgba(255, 98, 80,0.1);
+}
+.box-highlight.is_root_screen {
+  background: transparent;
+  box-shadow: inset 0px 0 0 3px #4285f4;
+}
+.box-highlight.is_component.is_root_screen {
+  box-shadow: inset 0px 0 0 3px #ff6250;
+}
+
+.box-highlight.is_root_screen .tag-box {
+  background: transparent;
+  top:3px;
+  left:0;
+}
+
+
+
+.is_component .tag-component-name{
+  color: #E2412E;
+  background: #F2BFAF;
+}
+.is_component .tag-name{
+  background: #ff6250;
+  color:#fff;
+}
+
+</style></head><body style="margin: 0px; background: rgb(255, 255, 255); overflow-x: hidden;" mode="code" dark-scroll=""><input type="hidden" id="anPageName" name="page" value="desktop-1"><div class="container-center-horizontal"><div class="desktop-1 screen " data-id="11:2"><div class="rectangle-1-Ys8k0x" data-id="11:3"></div><img class="layer_1-Ys8k0x" data-id="11:4" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/layer-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/layer-1.svg" alt="Layer_1"><div class="group-1-Ys8k0x" data-id="11:9"><img class="freebox-xdqVJv" data-id="11:10" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/freebox.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/freebox.png" alt="Freebox"><img class="calque_1-xdqVJv calque_1" data-id="11:11" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-3.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-3.svg" alt="Calque_1"></div><div class="group-2-Ys8k0x" data-id="11:13"><img class="mobile-LE77Zx" data-id="11:14" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/mobile.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/mobile.png" alt="Mobile"><img class="calque_1-LE77Zx calque_1" data-id="11:15" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-4.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-4.svg" alt="Calque_1"></div><img class="boutiques-Ys8k0x" data-id="11:17" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/boutiques.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/boutiques.png" alt="Boutiques"><img class="free-pro-Ys8k0x" data-id="11:18" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/free-pro.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/free-pro.png" alt="Free Pro"><img class="assistance-Ys8k0x" data-id="11:19" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/assistance.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/assistance.png" alt="Assistance"><div class="group-5-Ys8k0x" data-id="11:20"><img class="carte-dligibilit-W6BBbS" data-id="11:21" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/carte-d--ligibilit-.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/carte-d--ligibilit-.png" alt="Carte dligibilit"><img class="vector-1-W6BBbS" data-id="11:22" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/vector-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/vector-1.svg" alt="Vector 1"></div><img class="line-1-Ys8k0x" data-id="11:23" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/line-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/line-1.svg" alt="Line 1"><div class="group-6-Ys8k0x" data-id="11:24"><img class="espace-abonn-DSKghL" data-id="11:25" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/espace-abonn-.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/espace-abonn-.png" alt="Espace abonn"><div class="group-4-DSKghL" data-id="11:26"><img class="vector-2-1M3MNL" data-id="11:27" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/vector-2.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/vector-2.svg" alt="Vector 2"><div class="ellipse-1-1M3MNL" data-id="11:28"></div></div></div><img class="plan-de-travail-2-1-Ys8k0x" data-id="11:29" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/plan-de-travail-2-1.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/plan-de-travail-2-1.png" alt="Plan de travail 2 1"><p class="loffre-qui-casse-le-game-Ys8k0x montserrat-medium-white-36px" data-id="11:30">L’offre qui casse le game</p><div class="group-7-Ys8k0x" data-id="11:31"><div class="x99-fgrXsR" data-id="11:32"><span class="span0-sAlMkl">99</span><span class="span1-sAlMkl span1">€</span></div><h1 class="title-fgrXsR" data-id="11:33">/mois</h1></div><div class="group-8-Ys8k0x" data-id="11:34"><div class="rectangle-2-Xl5Dwo rectangle-2" data-id="11:35"></div><div class="sabonner-Xl5Dwo montserrat-medium-white-36px" data-id="11:36">S’abonner</div></div><div class="group-9-Ys8k0x" data-id="11:37"><img class="ecran-1-kphd6v" data-id="11:38" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/ecran-1.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/ecran-1.png" alt="ecran 1"><img class="casque-1-kphd6v" data-id="11:39" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/casque-1@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/casque-1@2x.png" alt="casque 1"><img class="pc-1-kphd6v" data-id="11:40" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/pc-1@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/pc-1@2x.png" alt="pc 1"><img class="test-mouse-1-kphd6v" data-id="11:41" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/test-mouse-1@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/test-mouse-1@2x.png" alt="test-mouse 1"></div><img class="plus-2-Ys8k0x" data-id="11:42" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/plus-2@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/plus-2@2x.png" alt="plus 2"><div class="x1-setup-gaming-complet-Ys8k0x" data-id="11:43"><span class="span0-U1u7RM montserrat-medium-white-36px">1 setup gaming </span><span class="span1">complet</span></div><div class="rectangle-3-Ys8k0x" data-id="11:44"></div><img class="polygon-1-Ys8k0x" data-id="11:45" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/polygon-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/polygon-1.svg" alt="Polygon 1"><p class="le-setup-qui-casse-le-game-Ys8k0x" data-id="11:46"><span class="span0-YrSAxh profontwindows-regular-normal-white-48px">Le </span><span class="span1">setup</span><span class="span2-YrSAxh profontwindows-regular-normal-white-48px"> qui casse le game</span></p><p class="en-cas-de-bug-con-Ys8k0x profontwindows-regular-normal-white-48px" data-id="11:47">En cas de bug, con</p><img class="calque_1-Ys8k0x calque_1" data-id="11:48" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1.svg" alt="Calque_1"><img class="calque_1-V3rtYt calque_1" data-id="11:50" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-1.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-1.svg" alt="Calque_1"><div class="group-11-Ys8k0x" data-id="11:52"><img class="pc-2-79Yex6" data-id="11:53" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/pc-2@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/pc-2@2x.png" alt="pc 2"><div class="group-10-79Yex6" data-id="11:54"><div class="rectangle-2-vyXPzx rectangle-2" data-id="11:55"></div><div class="la-config-vyXPzx montserrat-medium-white-36px" data-id="11:56">La config</div></div></div><div class="group-12-Ys8k0x" data-id="11:57"><div class="group-10-678TM3" data-id="11:58"><div class="rectangle-2-1Voha4 rectangle-2" data-id="11:59"></div><div class="lcran-1Voha4 montserrat-medium-white-36px" data-id="11:60">L’écran</div></div></div><div class="group-14-Ys8k0x" data-id="11:61"><div class="group-10-55mDMt" data-id="11:62"><div class="rectangle-2-1mJ9Qx rectangle-2" data-id="11:63"></div><div class="en-savoir-plus-1mJ9Qx" data-id="11:64">En savoir plus</div></div></div><div class="group-13-Ys8k0x" data-id="11:65"><div class="group-10-xqlGhp" data-id="11:66"><div class="rectangle-2-zGnD5u rectangle-2" data-id="11:67"></div><div class="le-fauteuil-zGnD5u montserrat-medium-white-36px" data-id="11:68">Le fauteuil</div></div></div><img class="ecran-2-Ys8k0x" data-id="11:69" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/ecran-2.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/ecran-2.png" alt="ecran 2"><img class="chaise-1-Ys8k0x" data-id="11:70" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/chaise-1.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/chaise-1.png" alt="chaise 1"><p class="une-freebox-pop-avec-la-fibre-Ys8k0x" data-id="11:71"><span class="span0-bfixez montserrat-medium-white-36px">Une freebox pop avec la </span><span class="span1">fibre</span></p><div class="ellipse-3-Ys8k0x" data-id="11:72"></div><div class="ellipse-4-Ys8k0x" data-id="11:73"></div><div class="ellipse-5-Ys8k0x" data-id="11:74"></div><img class="server-pop-1-Ys8k0x" data-id="11:75" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/server-pop-1@2x.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/server-pop-1@2x.png" alt="Server-pop 1"><div class="ellipse-2-Ys8k0x" data-id="11:76"></div><img class="server-pop-2-Ys8k0x" data-id="11:77" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/server-pop-2.png" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/server-pop-2.png" alt="Server-pop 2"><img class="calque_1-InqUpZ calque_1" data-id="11:78" src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-2.svg" anima-src="https://cdn.animaapp.com/projects/641d8e71c0aa53e1024ef479/releases/641d8e9f0cff767b8d5b8b07/img/calque-1-2.svg" alt="Calque_1"><p class="dcouvrez-la-freebox-Ys8k0x" data-id="11:90">Découvrez la Freebox Pop, la dernière innovation de Free ! Avec des débits allant jusqu'à 2,4 Gbits/s, un processeur performant, une commande vocale, un son Dolby Atmos,&nbsp;&nbsp;une compatibilité avec les jeux vidéo et un disque dur de 1 To, la Freebox Pop offre une expérience de navigation haut de gamme.</p></div></div><script src="launchpad-js/launchpad-banner.js" async=""></script><script defer="" src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script><div id="anima-interface" data-turbo-permanent="true" class="idle"><!---->
+        <div id="anima-comment-popover" class="popover top" role="tooltip" style="left: -205px; top: -220px;">
+          <div class="arrow" style="margin-left: 128px;"></div>
+          <div class="popover-content" style="align-items:center">
+            <div style="display:flex;flex-direction:column;height: 100%;padding: 20px;">
+              <h3 style="font-size:18px;margin-bottom:10px;font-weight:500;line-height: 26px;font-family: Roslindale;">
+                Leave feedback and collaborate
+              </h3>
+              <p style="font-size:12px;margin-bottom:20px;font-weight:400;line-height: 20px;">
+                Login to your account to leave comments. Don't have an account? Sign up for free!
+              </p>
+              <a target="_blank" rel="noopener noreferrer" class="btn">Add comment</a>
             </div>
-            <div class="desktop1-group2">
-              <span class="desktop1-text02"><span>Mobile</span></span>
-              <img
-                alt="Calque1615"
-                src="/playground_assets/calque1615-vf.svg"
-                class="desktop1-calque11"
-              />
-            </div>
-            <span class="desktop1-text04"><span>Boutiques</span></span>
-            <span class="desktop1-text06"><span>Free Pro</span></span>
-            <span class="desktop1-text08"><span>Assistance</span></span>
-            <div class="desktop1-group5">
-              <span class="desktop1-text10"><span>Carte d’éligibilité</span></span>
-              <img
-                alt="Vector1622"
-                src="/playground_assets/vector1622-o7x9.svg"
-                class="desktop1-vector1"
-              />
-            </div>
-            <img
-              alt="Line1623"
-              src="/playground_assets/line1623-em8f.svg"
-              class="desktop1-line1"
-            />
-            <div class="desktop1-group6">
-              <span class="desktop1-text12"><span>Espace abonné</span></span>
-              <div class="desktop1-group4">
-                <img
-                  alt="Vector2627"
-                  src="/playground_assets/vector2627-a1h.svg"
-                  class="desktop1-vector2"
-                />
-                <img
-                  alt="Ellipse1628"
-                  src="/playground_assets/ellipse1628-dqz6-200h.png"
-                  class="desktop1-ellipse1"
-                />
-              </div>
-            </div>
-            <img
-              alt="Plandetravail21629"
-              src="/playground_assets/plandetravail21629-2eka-600h.png"
-              class="desktop1-plandetravail21"
-            />
-            <span class="desktop1-text14">
-              <span>L’offre qui casse le game</span>
-            </span>
-            <div class="desktop1-group7">
-              <span class="desktop1-text16"><span>99€99</span></span>
-              <span class="desktop1-text18"><span>/mois</span></span>
-            </div>
-            <div class="desktop1-group8">
-              <span class="desktop1-text20"><span>S’abonner</span></span>
+
+            <div style="display:flex;align-items:center;justify-content:center;padding-right:20px">
+              <img src="https://animaapp.s3.amazonaws.com/static/comment-illustration.svg">
             </div>
           </div>
         </div>
-      </div>
-      
-    
-</body>
-</html>
+        
